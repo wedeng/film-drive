@@ -1,3 +1,5 @@
+Wenny Deng: wedeng
+
 # Note Application
 
 This is a minimal example demonstrating usage of the
