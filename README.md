@@ -1,5 +1,6 @@
 Wenny Deng: wedeng
 Ebrahim Mohamud: EbrahimMohamud
+Nwabuife Amede: Buife-C
 # Note Application
 
 This is a minimal example demonstrating usage of the
