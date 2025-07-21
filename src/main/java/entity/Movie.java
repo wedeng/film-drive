@@ -3,16 +3,17 @@ package entity;
 /**
  * The representation of a movie for our program.
  */
+
 public class Movie implements MovieInterface {
-    private final int id;
+    private int id;
     private final String title;
-    private final String posterPath;
-    private final String synopsis;
+    private String posterPath;
+    private String synopsis;
     private final int runtime;
     private final String genre;
     private final String language;
-    private final double rentPrice;
-    private final double buyPrice;
+    private double rentPrice;
+    private double buyPrice;
 
     public Movie(int id, String title, String posterPath,
                  String synopsis, int runtime, String genre,

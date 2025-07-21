@@ -1,7 +1,7 @@
 package entity;
 
 /**
- * The representation of a Movie in our program.
+ * A simple implementation of the Movie interface.
  */
 
 public interface MovieInterface {
