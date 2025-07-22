@@ -8,26 +8,26 @@ import java.util.Map;
  */
 
 public class AppUser implements AppUserInterface {
-    private final int tmdbAccountID;
+    private final int accountId;
     private String username;
 
-    private Map<Integer, Integer> ratedMovies;
     private List<String> preferredGenres;
     private List<Integer> savedMovies;
+    private Map<Integer, Integer> ratedMovies;
 
-    public AppUser(int tmdbAccountID, String username,
-                   Map<Integer, Integer> ratedMovies, List<String> preferredGenres,
-                   List<Integer> savedMovies) {
-        this.tmdbAccountID = tmdbAccountID;
+    public AppUser(int accountId, String username,
+                   List<String> preferredGenres, List<Integer> savedMovies,
+                   Map<Integer, Integer> ratedMovies) {
+        this.accountId = accountId;
         this.username = username;
-        this.ratedMovies = ratedMovies;
         this.preferredGenres = preferredGenres;
         this.savedMovies = savedMovies;
+        this.ratedMovies = ratedMovies;
     }
 
     @Override
-    public int getTmdbAccountID() {
-        return this.tmdbAccountID;
+    public int getAccountId() {
+        return this.accountId;
     }
 
     @Override

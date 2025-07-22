@@ -1,26 +1,29 @@
 package entity;
 
 /**
- * The representation of a movie for our program.
+ * The representation of a Movie for our program.
  */
 
 public class Movie implements MovieInterface {
-    private int id;
+    private int movieId;
+
     private final String title;
-    private String posterPath;
+    private String poster;
     private String synopsis;
     private final int runtime;
     private final String genre;
     private final String language;
+
     private double rentPrice;
     private double buyPrice;
 
-    public Movie(int id, String title, String posterPath,
+    public Movie(int movieId, String title, String poster,
                  String synopsis, int runtime, String genre,
                  String language, double rentPrice, double buyPrice) {
-        this.id = id;
+
+        this.movieId = movieId;
         this.title = title;
-        this.posterPath = posterPath;
+        this.poster = poster;
         this.synopsis = synopsis;
         this.runtime = runtime;
         this.genre = genre;
@@ -30,8 +33,8 @@ public class Movie implements MovieInterface {
     }
 
     @Override
-    public int getId() {
-        return this.id;
+    public int getMovieId() {
+        return this.movieId;
     }
 
     @Override
@@ -40,8 +43,8 @@ public class Movie implements MovieInterface {
     }
 
     @Override
-    public String getPosterPath() {
-        return this.posterPath;
+    public String getPoster() {
+        return this.poster;
     }
 
     @Override

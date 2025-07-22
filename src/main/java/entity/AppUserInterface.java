@@ -10,10 +10,10 @@ import java.util.Map;
 public interface AppUserInterface {
 
     /**
-     * Returns the tmdbAccountID of the AppUser.
-     * @return the tmdbAccountID of the AppUser.
+     * Returns the accountId of the AppUser.
+     * @return the accountId of the AppUser.
      */
-    int getTmdbAccountID();
+    int getAccountId();
 
     /**
      * Returns the username of the AppUser.

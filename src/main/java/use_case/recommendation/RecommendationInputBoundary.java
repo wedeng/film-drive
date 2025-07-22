@@ -6,8 +6,8 @@ package use_case.recommendation;
 
 public interface RecommendationInputBoundary {
     /**
-     * Executes the login use case.
+     * Executes the recommendation use case.
      * @param recommendationInputData the input data
      */
-    void execute(RecommendationInputData recommendationInputData);
+    void recommendMovies(RecommendationInputData recommendationInputData);
 }
