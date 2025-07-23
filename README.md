@@ -19,6 +19,60 @@
 - MovieSearchController + MovieSearchPresenter
 - AddToWatchListController + AddToWatchListPresenter
 
+### User Story 2
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 3
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 4
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 5
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 6
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+## Entities
+- **AppUser**: Stores user data including tmdbAccountID, username, ratedMovies, preferredGenres, savedMovies (used as watch list)
+- **Movie**: Represents movie data from TMDB API
+
 ## Note Application
 
 This is a minimal example demonstrating usage of the
