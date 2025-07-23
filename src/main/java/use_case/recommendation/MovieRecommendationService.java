@@ -14,5 +14,5 @@ public interface MovieRecommendationService {
      * @param movieId the id of a given movie.
      * @return A list of recommended movies.
      */
-    List<Movie> recommendMovie(int movieId);
+    List<Movie> recommendMovies(int movieId);
 }

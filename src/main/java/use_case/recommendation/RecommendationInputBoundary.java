@@ -9,5 +9,5 @@ public interface RecommendationInputBoundary {
      * Executes the recommendation use case.
      * @param recommendationInputData the input data
      */
-    void recommendMovies(RecommendationInputData recommendationInputData);
+    void executeRecommendation(RecommendationInputData recommendationInputData);
 }

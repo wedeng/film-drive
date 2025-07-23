@@ -9,11 +9,11 @@ import java.util.List;
 public class RecommendationInputData {
     private final int accountId;
     private int maxRecommendations;
-    private List<Integer> watchedMovieId;
+    private List<Integer> watchedMovieIds;
 
     public RecommendationInputData(int accountId, List<Integer> watchedMovieId, int maxRecommendations) {
         this.accountId = accountId;
-        this.watchedMovieId = watchedMovieId;
+        this.watchedMovieIds = watchedMovieId;
         this.maxRecommendations = maxRecommendations;   
     }
 
@@ -25,7 +25,7 @@ public class RecommendationInputData {
         return this.maxRecommendations;
     }
 
-    public List<Integer> getWatchedMovieId() {
-        return this.watchedMovieId;
+    public List<Integer> getWatchedMovieIds() {
+        return this.watchedMovieIds;
     }
 }
