@@ -1,7 +1,79 @@
-Wenny Deng: wedeng
-Ebrahim Mohamud: EbrahimMohamud
-Nwabuife Amede: Buife-C
-# Note Application
+# Movie Recommendation System
+
+## Team Members
+- Wenny Deng: wedeng
+- Ebrahim Mohamud: EbrahimMohamud
+- Nwabuife Amede: Buife-C
+
+## User Stories
+
+### User Story 1
+**Assigned to:** Nwabuife Amede
+**Description:** As a user, I want to search for a movie and add it to my "To-Watch" list so I can find it later.
+
+**Use Cases:**
+- Search Movies: User enters search query → System searches TMDB API → Returns movie results
+- Add to Watch List: User selects movie → System adds to user's watch list → Confirms addition
+
+**User Interactions:**
+- MovieSearchController + MovieSearchPresenter
+- AddToWatchListController + AddToWatchListPresenter
+
+### User Story 2
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 3
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 4
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 5
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+### User Story 6
+**Assigned to:** []
+**Description:** ...
+
+**Use Cases:**
+...
+
+**User Interactions:**
+...
+
+## Entities
+- **AppUser**: Stores user data including tmdbAccountID, username, ratedMovies, preferredGenres, savedMovies (used as watch list)
+- **Movie**: Represents movie data from TMDB API
+
+## Note Application
 
 This is a minimal example demonstrating usage of the
 password-protected user part of the API used in lab 5.
