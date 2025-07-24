@@ -1,4 +1,4 @@
-package interface_adapter.note;
+package interface_adapter.app;
 
 import use_case.note.NoteOutputBoundary;
 
@@ -7,10 +7,10 @@ import use_case.note.NoteOutputBoundary;
  */
 public class NotePresenter implements NoteOutputBoundary {
 
-    private final NoteViewModel noteViewModel;
+    private final AppViewModel appViewModel;
 
-    public NotePresenter(NoteViewModel noteViewModel) {
-        this.noteViewModel = noteViewModel;
+    public NotePresenter(AppViewModel appViewModel) {
+        this.appViewModel = appViewModel;
     }
 
     /**
@@ -20,9 +20,9 @@ public class NotePresenter implements NoteOutputBoundary {
      */
     @Override
     public void prepareSuccessView(String note) {
-        noteViewModel.getState().setNote(note);
-        noteViewModel.getState().setError(null);
-        noteViewModel.firePropertyChanged();
+//        appViewModel.getState().setNote(note);
+        appViewModel.getState().setError(null);
+        appViewModel.firePropertyChanged();
     }
 
     /**
@@ -32,7 +32,7 @@ public class NotePresenter implements NoteOutputBoundary {
      */
     @Override
     public void prepareFailView(String errorMessage) {
-        noteViewModel.getState().setError(errorMessage);
-        noteViewModel.firePropertyChanged();
+        appViewModel.getState().setError(errorMessage);
+        appViewModel.firePropertyChanged();
     }
 }
