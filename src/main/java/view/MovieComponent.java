@@ -1,5 +1,7 @@
 package view;
 
+import entity.Movie;
+
 import java.awt.*;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,6 +19,7 @@ public class MovieComponent extends JPanel {
 
         this.movie = movie;
 
+        // style
         this.setPreferredSize(new Dimension(112, 192));
         this.setBorder(BorderFactory.createLineBorder(Color.black));
 
@@ -30,16 +33,20 @@ public class MovieComponent extends JPanel {
 
         final ImageIcon posterImage = new ImageIcon(url);
         poster.setIcon(posterImage);
-
         poster.setPreferredSize(new Dimension(92, 138));
+
+        // get title text (placeholder code currently used)
+        // title.setText(movie.getTitle());
         title.setText("Sinners");
+
+        // get release year (placeholder code currently used)
+//        year.setText(String.valueOf(movie.getReleaseDate().getYear()));
         year.setText("2025");
         year.setForeground(Color.GRAY);
 
         this.add(poster, initializePosterConstraints());
         this.add(title, initializeTitleConstraints());
         this.add(year, initializeYearConstraints());
-
     }
 
     private GridBagConstraints initializePosterConstraints() {

@@ -1,5 +1,7 @@
 package entity;
 
+import java.time.LocalDate;
+
 /**
  * The representation of a Movie for our program.
  */
@@ -8,6 +10,7 @@ public class Movie implements MovieInterface {
     private int movieId;
 
     private final String title;
+    private final LocalDate releaseDate;
     private String poster;
     private String synopsis;
     private final int runtime;
@@ -17,12 +20,13 @@ public class Movie implements MovieInterface {
     private double rentPrice;
     private double buyPrice;
 
-    public Movie(int movieId, String title, String poster,
+    public Movie(int movieId, String title, LocalDate releaseDate, String poster,
                  String synopsis, int runtime, String genre,
                  String language, double rentPrice, double buyPrice) {
 
         this.movieId = movieId;
         this.title = title;
+        this.releaseDate = releaseDate;
         this.poster = poster;
         this.synopsis = synopsis;
         this.runtime = runtime;
@@ -40,6 +44,11 @@ public class Movie implements MovieInterface {
     @Override
     public String getTitle() {
         return this.title;
+    }
+
+    @Override
+    public LocalDate getReleaseDate() {
+        return this.releaseDate;
     }
 
     @Override
