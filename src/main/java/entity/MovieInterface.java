@@ -1,5 +1,7 @@
 package entity;
 
+import java.time.LocalDate;
+
 /**
  * A simple implementation of the Movie interface.
  */
@@ -17,6 +19,12 @@ public interface MovieInterface {
      * @return the title of the Movie.
      */
     String getTitle();
+
+    /**
+     * Returns the release date of the Movie.
+     * @return the release date of the Movie.
+     */
+    LocalDate getReleaseDate();
 
     /**
      * Returns the poster of the Movie.
