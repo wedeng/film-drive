@@ -1,5 +1,6 @@
 package view;
 
+import entity.Movie;
 import entity.MovieInterface;
 
 import java.awt.Color;
@@ -8,6 +9,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.LocalDate;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -21,7 +23,7 @@ public class MovieComponent extends JPanel {
     static final double POSTER_ASPECT_RATIO = 1.5;
 
     // used to calculate the total height of this from poster height
-    static final double HEIGHT_MULTIPLIER = 1.2;
+    static final double HEIGHT_MULTIPLIER = 1.3;
 
     private final MovieInterface movie;
     private final JLabel poster = new JLabel();
@@ -64,6 +66,12 @@ public class MovieComponent extends JPanel {
         this.add(poster, initializePosterConstraints());
         this.add(title, initializeTitleConstraints());
         this.add(year, initializeYearConstraints());
+    }
+
+    // TODO: Delete this placeholder constructor eventually
+    public MovieComponent() {
+        this(new Movie(2, "Sinners", LocalDate.of(2025, 4, 5),
+                "placeholder", "(synopsis)", 120, "genre", "English", 5, 20));
     }
 
     private GridBagConstraints initializePosterConstraints() {
