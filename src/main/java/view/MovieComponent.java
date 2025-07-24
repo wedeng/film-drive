@@ -1,46 +1,63 @@
 package view;
 
-import entity.Movie;
+import entity.MovieInterface;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.net.MalformedURLException;
 import java.net.URL;
-import javax.swing.*;
+
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 public class MovieComponent extends JPanel {
 
-    private final Movie movie;
+    // should probably move these constants somewhere more global eventually
+    static final int POSTER_WIDTH = 92;
+    static final double POSTER_ASPECT_RATIO = 1.5;
+
+    // used to calculate the total height of this from poster height
+    static final double HEIGHT_MULTIPLIER = 1.2;
+
+    private final MovieInterface movie;
     private final JLabel poster = new JLabel();
     private final JLabel title = new JLabel();
     private final JLabel year = new JLabel();
 
-    public MovieComponent(Movie movie) {
+    public MovieComponent(MovieInterface movie) {
         super(new GridBagLayout());
+
+        final int posterHeight = (int) Math.round(POSTER_WIDTH * POSTER_ASPECT_RATIO);
 
         this.movie = movie;
 
         // style
-        this.setPreferredSize(new Dimension(112, 192));
+        this.setPreferredSize(new Dimension(POSTER_WIDTH, (int) Math.round(posterHeight * HEIGHT_MULTIPLIER)));
         this.setBorder(BorderFactory.createLineBorder(Color.black));
 
         // get poster image from URL (placeholder code)
-        URL url;
+        final URL url;
         try {
             url = new URL("https://image.tmdb.org/t/p/w92/4CkZl1LK6a5rXBqJB2ZP77h3N5i.jpg");
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+        }
+        catch (MalformedURLException ex) {
+            throw new RuntimeException(ex);
         }
 
         final ImageIcon posterImage = new ImageIcon(url);
         poster.setIcon(posterImage);
-        poster.setPreferredSize(new Dimension(92, 138));
+        poster.setPreferredSize(new Dimension(POSTER_WIDTH, (int) Math.round(POSTER_WIDTH * POSTER_ASPECT_RATIO)));
 
         // get title text (placeholder code currently used)
         // title.setText(movie.getTitle());
         title.setText("Sinners");
 
         // get release year (placeholder code currently used)
-//        year.setText(String.valueOf(movie.getReleaseDate().getYear()));
+        // year.setText(String.valueOf(movie.getReleaseDate().getYear()));
         year.setText("2025");
         year.setForeground(Color.GRAY);
 
