@@ -7,10 +7,10 @@ package entity;
 public interface MovieInterface {
 
     /**
-     * Returns the id of the Movie.
-     * @return the id of the Movie.
+     * Returns the movieId of the Movie.
+     * @return the movieId of the Movie.
      */
-    int getId();
+    int getMovieId();
 
     /**
      * Returns the title of the Movie.
@@ -19,10 +19,10 @@ public interface MovieInterface {
     String getTitle();
 
     /**
-     * Returns the posterPath of the Movie.
-     * @return the posterPath of the Movie.
+     * Returns the poster of the Movie.
+     * @return the poster of the Movie.
      */
-    String getPosterPath();
+    String getPoster();
 
     /**
      * Returns the synopsis of the Movie.
