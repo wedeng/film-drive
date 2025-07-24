@@ -1,3 +1,4 @@
+// TODO: DELETE THIS FILE AFTER COMPLETING OUR APPLICATION!
 package app;
 
 import data_access.DBNoteDataAccessObject;
