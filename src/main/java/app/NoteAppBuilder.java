@@ -1,3 +1,4 @@
+// TODO: DELETE THIS FILE AFTER COMPLETING OUR APPLICATION!
 package app;
 
 import javax.swing.JFrame;
