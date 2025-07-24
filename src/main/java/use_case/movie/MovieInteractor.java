@@ -2,6 +2,7 @@ package use_case.movie;
 
 import entity.Movie;
 import entity.AppUser;
+import use_case.note.DataAccessException;
 import java.util.List;
 
 public class MovieInteractor implements MovieInputBoundary {
